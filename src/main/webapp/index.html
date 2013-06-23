@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>Audio Controller</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</head>
+<body ng-controller="NowPlayingCtrl">
+
+	<header class="topButtons">
+		<img class="button editPlaylistButton" src="img/playlist.gif"/>
+	</header>
+	
+	<div class="centrePanel">
+		<div class="trackContent">
+			<img class="albumCover" src="svr/getArtwork?id={{nowPlaying.trackId}}"/>
+			<div class="artist">{{nowPlaying.artist}}</div>
+			<div class="album">{{nowPlaying.album}}</div>
+			<div class="track">{{nowPlaying.track}}</div>
+		</div>
+	</div>
+	
+	<footer class="bottomButtons">
+		<img class="button repeatButton" src="img/repeat_{{nowPlaying.isRepeat}}.png"/>
+		<img class="button previousButton" src="img/previousTrack.png"/>
+		<img class="button playButton" src="img/playing_{{nowPlaying.isPlaying}}.png"/>
+		<img class="button nextButton" src="img/nextTrack.png"/>
+		<img class="button shuffleButton" src="img/shuffle_{{nowPlaying.isShuffle}}.png"/>
+	</footer>
+
+
+
+</body>
+</html>

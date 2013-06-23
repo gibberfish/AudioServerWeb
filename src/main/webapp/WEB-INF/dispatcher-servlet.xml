@@ -71,12 +71,17 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
   	<constructor-arg ref="playerFactory"/>
   	<property name="broadcaster" ref="jukebox"/>
   </bean>
+
+    
+  <bean id="playList" class="com.mindbadger.jukebox.PlayList">
+  	<property name="playlistRandomiser" ref="playlistRandomiser"/>
+  </bean>
   
   <bean id="jukebox" class="com.mindbadger.jukebox.Jukebox">
   	<constructor-arg ref="mediaPlayerCache"/>
   	<property name="audioPlayer" ref="audioPlayer"/>
-  	<property name="playlistRandomiser" ref="playlistRandomiser"/>
   	<property name="statusBroadcaster" ref="statusBroadcaster"/>
+  	<property name="playList" ref="playList"/>
   </bean>
   
   

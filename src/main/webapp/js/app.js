@@ -1,5 +1,29 @@
 'use strict';
 
+$( document ).ready(function() {
+ 
+	$(".playButton").click (function (event) {
+		$.get( "/AudioServerWeb/svr/playOrPause");
+	});
+
+	$(".nextButton").click (function (event) {
+		$.get( "/AudioServerWeb/svr/nextTrack");
+	});
+ 
+	$(".previousButton").click (function (event) {
+		$.get( "/AudioServerWeb/svr/previousTrack");
+	});
+
+	$(".repeatButton").click (function (event) {
+		$.get( "/AudioServerWeb/svr/toggleRepeat");
+	});
+
+	$(".shuffleButton").click (function (event) {
+		$.get( "/AudioServerWeb/svr/toggleShuffle");
+	});
+	
+ 
+});
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers']).

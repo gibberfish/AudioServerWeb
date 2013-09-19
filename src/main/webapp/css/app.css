@@ -24,6 +24,14 @@ a {
 /*
 	Common sections
 */
+.addButton {
+	float: left;	
+}
+
+.clearPlaylistButton {
+	float: right;
+}
+
 .previousButton {
 	float: left;
 	text-align: center;

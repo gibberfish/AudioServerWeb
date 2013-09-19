@@ -2,6 +2,7 @@
 <html lang="en" ng-app>
 <head>
   <meta charset="utf-8">
+  <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />
   <title>Audio Controller</title>
   <link rel="stylesheet" href="css/app.css"/>
   <script src="lib/angular/angular.js"></script>
@@ -16,12 +17,16 @@
 <body ng-controller="NowPlayingCtrl">
 
 	<header class="topButtons">
-		<img class="button editPlaylistButton" src="img/playlist.gif"/>
+		<div class="headFootContent">
+			<img class="button editPlaylistButton" src="img/playlist.gif"/>
+		</div>
 	</header>
 	
 	<div class="centrePanel">
 		<div class="centreContent">
+			<img class="button previousButton" src="img/previousTrack.png"/>
 			<img class="albumCover" src="svr/getArtwork?id={{nowPlaying.trackId}}"/>
+			<img class="button nextButton" src="img/nextTrack.png"/>
 			<div class="artist">{{nowPlaying.artist}}</div>
 			<div class="album">{{nowPlaying.album}}</div>
 			<div class="track">{{nowPlaying.track}}</div>
@@ -29,11 +34,13 @@
 	</div>
 	
 	<footer class="bottomButtons">
-		<img class="button repeatButton" src="img/repeat_{{nowPlaying.isRepeat}}.png"/>
-		<img class="button previousButton" src="img/previousTrack.png"/>
-		<img class="button playButton" src="img/playing_{{nowPlaying.isPlaying}}.png"/>
-		<img class="button nextButton" src="img/nextTrack.png"/>
-		<img class="button shuffleButton" src="img/shuffle_{{nowPlaying.isShuffle}}.png"/>
+		<div class="headFootContent">
+			<img class="button repeatButton" src="img/repeat_{{nowPlaying.isRepeat}}.png"/>
+			
+			<img class="button playButton" src="img/playing_{{nowPlaying.isPlaying}}.png"/>
+			
+			<img class="button shuffleButton" src="img/shuffle_{{nowPlaying.isShuffle}}.png"/>
+		</div>
 	</footer>
 
 

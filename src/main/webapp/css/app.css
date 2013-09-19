@@ -14,8 +14,8 @@ a {
 }
 
 .button {
-	height:80px;
-	weight:80px;
+	height:128px;
+	weight:128px;
 	margin-top: 10px;
 	margin-left:10px;
 	margin-right: 10px;
@@ -24,13 +24,26 @@ a {
 /*
 	Common sections
 */
+.previousButton {
+	float: left;
+	text-align: center;
+	margin-top:150px;
+	
+}
+
+.nextButton {
+	float: right;
+	text-align: center;
+	margin-top:150px;
+}
+
 .topButtons {
 	float: top;
-	height: 100px;
-	background-color:grey;
+	height: 148px;
 	text-align: center;
 	margin: 5px;
 }
+
 
 .centrePanel {
 	width: 100%;
@@ -39,21 +52,31 @@ a {
     text-align: center;
 }
 
+
+.bottomButtons {
+	float: bottom;
+	height: 148px;
+	text-align: center;
+	margin: 2px;
+}
+
+.headFootContent {
+	width: 580px;
+	height: 148px;
+	text-align: center;
+	margin: 0 auto;
+	background-color:grey;
+}
+
 .centreContent {
 	background-color:white;
-	width: 600px;
-	height: 700px;
+	width: 580px;
+	height: 420px;
 	text-align: center;
 	margin: 0 auto;
 }
 
-.bottomButtons {
-	float: bottom;
-	height: 100px;
-	background-color:grey;
-	text-align: center;
-	margin: 2px;
-}
+
 
 /*
 	Main page
@@ -77,10 +100,10 @@ a {
 }
 
 .albumCover {
-	height:300px;
-	weight:300px;
-	margin-top: 50px;
-	margin-bottom: 70px;
+	height:200px;
+	weight:200px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 /*

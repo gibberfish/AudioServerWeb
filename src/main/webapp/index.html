@@ -11,6 +11,7 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script src="js/indexPage.js"></script>
 </head>
 <body ng-controller="NowPlayingCtrl">
 
@@ -19,7 +20,7 @@
 	</header>
 	
 	<div class="centrePanel">
-		<div class="trackContent">
+		<div class="centreContent">
 			<img class="albumCover" src="svr/getArtwork?id={{nowPlaying.trackId}}"/>
 			<div class="artist">{{nowPlaying.artist}}</div>
 			<div class="album">{{nowPlaying.album}}</div>
